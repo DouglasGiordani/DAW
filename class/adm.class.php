@@ -13,7 +13,7 @@ class adm{
 			private $conexao;
 			//utilizamos construct para atribuir valors a los atributos y expessificamos a tabela q vamos acesar 
 			public function __construct(){
-				$this->conexao = mysqli_connect("127.0.0.1","root","" ,"celenifotos")
+				$this->conexao = mysqli_connect("localhost","root","" ,"celenifotos")
 				or die ("Erro 404");
 				$this->tabela = "adm";
 			}
@@ -43,7 +43,7 @@ class adm{
 				
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
-					$obj = new Usuario();
+					$obj = new adm();
 					$obj->ID = $res['ID'];
 					$obj->Nome = $res ['Nome'];
 					$obj->Email = $res ['Email'];
@@ -61,7 +61,7 @@ class adm{
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){
-			 $objeto = new Usuario();
+			 $objeto = new adm();
 			 $objeto->ID = $resultado['ID'];
 			 $objeto->Nome = $resultado['Nome'];
 			 $objeto->Email = $resultado['Email'];
@@ -93,7 +93,7 @@ class adm{
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){ 
-			 $objeto = new Usuario();
+			 $objeto = new adm();
 			 $objeto->ID = $resultado['ID'];	
 			 
         	 $retUsuar = $objeto;

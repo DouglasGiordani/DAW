@@ -1,14 +1,12 @@
 <?php
 	include_once("../../class/Carregar.class.php");
 include_once("../../interface/topo.php");
-	$objUsuario = new Usuario();
-	$objUsuario->Nome = $_POST["Nome"];
-	$objUsuario->Email = $_POST["Email"];
-	$objUsuario->Nascimento = $_POST["Nascimento"];
-	$objUsuario->RG = $_POST["RG"];
-	$objUsuario->Tipo = "Administrador";
-	$objUsuario->Senha = $_POST["Senha"];
-	$retorno = $objUsuario->inserir();
+	$obj = new adm();
+	$obj->Nome = $_POST["Nome"];
+	$obj->Email = $_POST["Email"];
+	$obj->Tipo = "Administrador";
+	$obj->Senha = $_POST["Senha"];
+	$retorno = $obj->inserir();
 	if ($retorno)
 		echo "funciono Você e muito proo";
 	else

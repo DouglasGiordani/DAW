@@ -16,7 +16,7 @@ class Foto{
 			private $conexao;
 			//utilizamos construct para atribuir valors a los atributos y expessificamos a tabela q vamos acesar 
 			public function __Construct(){
-				$this->conexao = mysqli_connect("127.0.0.1","root","" ,"celenifotos")
+				$this->conexao = mysqli_connect("localhost","root","" ,"celenifotos")
 				or die ("Erro 404");
 				$this->tabela = "galeria";
 			}
