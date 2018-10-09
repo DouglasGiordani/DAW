@@ -31,7 +31,7 @@ class adm{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO $this->tabela(Nome, Email, Nascimento, RG, Tipo, Senha) 
+				$sql = "INSERT INTO $this->tabela(Nome, Email, Tipo, Senha) 
 				values('$this->Nome', '$this->Email', '$this->Tipo','$this->Senha') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
