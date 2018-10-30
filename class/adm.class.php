@@ -3,7 +3,7 @@
 class adm{
 			private $ID;
 			private $Nome;
-			private $Email;	
+			private $Nume_de_usuario;	
     		private $Tipo;
 			private $Senha;
 		    
@@ -31,8 +31,8 @@ class adm{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO $this->tabela(Nome, Email, Tipo, Senha) 
-				values('$this->Nome', '$this->Email', '$this->Tipo','$this->Senha') ";
+				$sql = "INSERT INTO $this->tabela(Nome, Nome_de_usuario, Tipo, Senha) 
+				values('$this->Nome', '$this->Nome_de_usuario', '$this->Tipo','$this->Senha') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
@@ -46,7 +46,7 @@ class adm{
 					$obj = new adm();
 					$obj->ID = $res['ID'];
 					$obj->Nome = $res ['Nome'];
-					$obj->Email = $res ['Email'];
+					$obj->Nome_de_usuario = $res ['Nome_de_usuario'];
 					$obj->Tipo = $res ['Tipo'];
 					$obj->Senha = $res ['Senha'];
 					
@@ -64,7 +64,7 @@ class adm{
 			 $objeto = new adm();
 			 $objeto->ID = $resultado['ID'];
 			 $objeto->Nome = $resultado['Nome'];
-			 $objeto->Email = $resultado['Email'];
+			 $objeto->Nome_de_usuario = $resultado['Nome_de_usuario'];
 			 $objeto->Tipo = $resultado['Tipo'];
 			 $objeto->Senha = $resultado['Senha'];
 			 
@@ -77,7 +77,7 @@ class adm{
 	 }
 	  public function editar(){
 		 $sql = "UPDATE $this->tabela SET
-		 Nome = '$this->Nome', Email = '$this->Email',
+		 Nome = '$this->Nome', Nome_de_usuario = '$this->Nome_de_usuario',
 		 Tipo = '$this->Tipo', Senha = '$this->Senha' WHERE ID=$this->ID";
 		 $retorno = mysqli_query($this->conexao,$sql);
 		 return $retorno;
@@ -88,7 +88,7 @@ class adm{
 		 return $retorno;
 		 }
 		 	public function loginadm(){
-		 $sql = "SELECT * FROM $this->tabela where Email='$this->Email' and Senha='$this->Senha' and Tipo='Administrador'";
+		 $sql = "SELECT * FROM $this->tabela where Nome_de_usuario='$this->Nome_de_usuario' and Senha='$this->Senha' and Tipo='Administrador'";
 		 $retorno = mysqli_query($this->conexao, $sql);
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);

@@ -5,7 +5,7 @@ class Foto{
 			private $ID;
 			private $Imagen;
 			private $Data;
-			private $Descricao;
+			
 		
 			
 	
@@ -34,8 +34,8 @@ class Foto{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO 	$this->tabela(Id_galeria,Data, Imagen, Descricao) 
-				values($this->Id_galeria '$this->Data', '$this->Imagen', '$this->Descricao') ";
+				$sql = "INSERT INTO 	$this->tabela(Id_galeria,Data, Imagen) 
+				values($this->Id_galeria '$this->Data', '$this->Imagen') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
@@ -49,8 +49,7 @@ class Foto{
 					$obj = new Produto();
 					$obj->ID = $res['ID'];
 				 	$obj->Data = $res['Data'];
-					$obj-> Imagen = $res ['Imagen'];
-                    $obj-> Descricao = $res ['Descricao'];
+					$obj-> Imagen = $res ['Imagen'];     
 				    $obj->Id_galeria =$res['galeria'];
 
 					
@@ -74,9 +73,9 @@ class Foto{
 			 $objeto = new Produto();
 			 $objeto->ID = $resultado['ID'];
 			 $objeto->Id_galeria = $resultado['galeria'];
-			 $obj->Data = $res['Data'];
+			 $objeto->Data = $res['Data'];
 			 $objeto->Imagen = $resultado['Imagen'];
-			$obj-> Descricao = $res ['Descricao'];					
+							
 			 
 			 $retUsuar = $objeto;
 		 }
@@ -87,8 +86,7 @@ class Foto{
 	 }
 	 
 	 public function editar(){
-		 $sql = "UPDATE $this->tabela SET Id_galeria = $this->Id_galeria,
-		, Descricao = '$this->Descricao' WHERE ID = $this->ID";
+		 $sql = "UPDATE $this->tabela SET Id_galeria = $this->Id_galeria, WHERE ID = $this->ID";
 		 $retorno = mysqli_query($this->conexao,$sql);
 		 return $retorno;
 	 }

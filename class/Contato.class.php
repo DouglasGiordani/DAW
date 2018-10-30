@@ -1,10 +1,10 @@
 <?php
 
-class Foto{
-			private $Id_galeria;
+class Contato{
 			private $ID;
-			private $Imagen;
-			private $Data;
+			private $contato;
+			private $Tipo;
+			
 		
 			
 	
@@ -15,9 +15,9 @@ class Foto{
 			private $conexao;
 			//utilizamos construct para atribuir valors a los atributos y expessificamos a tabela q vamos acesar 
 			public function __Construct(){
-				$this->conexao = mysqli_connect("127.0.0.1","root","" ,"celenifotos")
+				$this->conexao = mysqli_connect("localhost","root","" ,"celenifotos")
 				or die ("Erro 404");
-				$this->tabela = "galeria";
+				$this->tabela = "contato";
 			}
 			//fecha a conexao se deixar o banco aberto e elemina da memoria 
 			public function __destruct(){
@@ -33,24 +33,22 @@ class Foto{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO 	$this->tabela(Id_galeria,Data, Imagen, Descricao) 
-				values($this->Id_galeria '$this->Data', '$this->Imagen', '$this->Descricao') ";
+				$sql = "INSERT INTO 	$this->tabela(ID,contato, Tipo) 
+				values($this->ID '$this->contato', '$this->Tipo') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
 			public function listar ($complemento = ""){
-				$sql = "SELECT $this->tabela.*,galeria.Nome as galeria FROM 
-				$this->tabela INNER JOIN galeria ON $this->tabela.Id_galeria= galeria.ID ".$complemento;
+				$sql = "SELECT $this->tabela";
 				$retorno = mysqli_query($this->conexao, $sql);
 				
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
 					$obj = new Produto();
 					$obj->ID = $res['ID'];
-				 	$obj->Data = $res['Data'];
-					$obj-> Imagen = $res ['Imagen'];
-                    $obj-> Descricao = $res ['Descricao'];
-				    $obj->Id_galeria =$res['galeria'];
+				 	$obj->contato = $res['contato'];
+					$obj-> Tipo = $res ['Tipo'];     
+				   
 
 					
 					$arrayObj[] = $obj;
@@ -62,20 +60,18 @@ class Foto{
 			
 					
 					
-			public function retornarUnico(){
-		 $sql = "SELECT $this->tabela.*,galeria.Nome as galeriaFROM 
-				$this->tabela INNER JOIN galeria ON $this->tabela.Id_galeria = galeria.ID
-				where $this->tabela.ID=$this->ID";
+					public function retornarUnico(){
+		 $sql = "SELECT * FROM $this->tabela where ID=$this->ID";
 		 $retorno = mysqli_query($this->conexao, $sql);
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){
-			 $objeto = new Produto();
+			 $objeto = new contato();
 			 $objeto->ID = $resultado['ID'];
-			 $objeto->Id_galeria = $resultado['galeria'];
-			 $obj->Data = $res['Data'];
-			 $objeto->Imagen = $resultado['Imagen'];
-			$obj-> Descricao = $res ['Descricao'];					
+			 $objeto->contato = $resultado['contato'];
+			 $objeto->Tipo = $resultado['Tipo'];
+			
+							
 			 
 			 $retUsuar = $objeto;
 		 }
@@ -86,8 +82,7 @@ class Foto{
 	 }
 	 
 	 public function editar(){
-		 $sql = "UPDATE $this->tabela SET Id_galeria = $this->Id_galeria,
-		, Descricao = '$this->Descricao' WHERE ID = $this->ID";
+		 $sql = "UPDATE $this->tabela SET ID = $this->ID, WHERE ID = $this->ID";
 		 $retorno = mysqli_query($this->conexao,$sql);
 		 return $retorno;
 	 }
@@ -96,13 +91,7 @@ class Foto{
          $retorno = mysqli_query($this->conexao, $sql);
 		 return $retorno;
 		 }
-		 public function editarimg(){	 
-		 $sql = "UPDATE $this->tabela SET 
-		 Imagen = '$this->Imagen' WHERE ID= $this->ID";
-		 $retorno = mysqli_query($this->conexao,$sql);
-		 return $retorno;
-			 
-		 }
+		
 }
 
 ?>

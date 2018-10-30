@@ -1,18 +1,23 @@
 <?php
 
-class Galeria{
+class Contato{
 			private $ID;
-			private $Nome;
-			private $Data;
+			private $Id_admin;
+			private $data;
+			private $Evento;
+		
 			
+	
+		    
+		
 			
 			private $tabela;
 			private $conexao;
 			//utilizamos construct para atribuir valors a los atributos y expessificamos a tabela q vamos acesar 
 			public function __Construct(){
-				$this->conexao = mysqli_connect("127.0.0.1","root","" ,"celenifotos")
+				$this->conexao = mysqli_connect("localhost","root","" ,"celenifotos")
 				or die ("Erro 404");
-				$this->tabela = "categorias";
+				$this->tabela = "agenda";
 			}
 			//fecha a conexao se deixar o banco aberto e elemina da memoria 
 			public function __destruct(){
@@ -28,36 +33,46 @@ class Galeria{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO 	$this->tabela(Nome) 
-				values('$this->Nome') ";
+				$sql = "INSERT INTO 	$this->tabela(ID,Id_admin, data, Evento) 
+				values($this->ID '$this->Id_admin', '$this->data', '$this->Evento') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
-				public function listar (){
-				$sql = "SELECT * FROM $this->tabela";
+			public function listar ($complemento = ""){
+				$sql = "SELECT $this->tabela";
 				$retorno = mysqli_query($this->conexao, $sql);
 				
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
-					$obj = new Galeria();
+					$obj = new Produto();
 					$obj->ID = $res['ID'];
-					$obj->Nome = $res ['Nome'];
-					$obj->Data = $res ['Data'];
+				 	$obj->Id_admin = $res['Id_admin'];
+					$obj-> data = $res ['data'];   
+					$obj-> Evento = $res ['Evento'];    					
+				   
+
+					
 					$arrayObj[] = $obj;
 					
 				}
 				return $arrayObj;
-				}
+				
+			}
+			
+					
+					
 					public function retornarUnico(){
 		 $sql = "SELECT * FROM $this->tabela where ID=$this->ID";
 		 $retorno = mysqli_query($this->conexao, $sql);
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){
-			 $objeto = new Galeria();
+			 $objeto = new agenda();
 			 $objeto->ID = $resultado['ID'];
-			 $objeto->Nome = $resultado['Nome'];
-			 $obj->Data = $resultado ['Data'];
+			$objeto->Id_admin = $resultado['Id_admin'];
+			$objeto-> data = $resultado ['data'];   
+			$objeto-> Evento = $resultado ['Evento'];  
+							
 			 
 			 $retUsuar = $objeto;
 		 }
@@ -66,17 +81,18 @@ class Galeria{
 		 }
 		 return $retUsuar;
 	 }
-			  public function editar(){
-		 $sql = "UPDATE $this->tabela SET
-		 Nome = '$this->Nome' WHERE ID=$this->ID";
+	 
+	 public function editar(){
+		 $sql = "UPDATE $this->tabela SET ID = $this->ID, WHERE ID = $this->ID";
 		 $retorno = mysqli_query($this->conexao,$sql);
 		 return $retorno;
 	 }
-	 	 public function excluir(){
+	 public function excluir(){
 		 $sql ="DELETE FROM $this->tabela WHERE ID=$this->ID";
          $retorno = mysqli_query($this->conexao, $sql);
 		 return $retorno;
 		 }
+		
 }
 
 ?>
