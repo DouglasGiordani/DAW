@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Out-2018 às 03:10
+-- Generation Time: 31-Out-2018 às 00:34
 -- Versão do servidor: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `adm` (
   `ID` int(11) NOT NULL,
   `Nome` varchar(50) DEFAULT NULL,
-  `Email` varchar(50) DEFAULT NULL,
+  `Nome_de_usuario` varchar(50) DEFAULT NULL,
   `Tipo` varchar(50) DEFAULT NULL,
   `Senha` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -40,9 +40,59 @@ CREATE TABLE `adm` (
 -- Extraindo dados da tabela `adm`
 --
 
-INSERT INTO `adm` (`ID`, `Nome`, `Email`, `Tipo`, `Senha`) VALUES
-(1, 'Douglas', 'giordani@outlook.com', 'Administrador', 'seila'),
-(2, 'teste', 'teste@gmail.com', 'teste', 'seila');
+INSERT INTO `adm` (`ID`, `Nome`, `Nome_de_usuario`, `Tipo`, `Senha`) VALUES
+(1, 'douglas', 'douglasgiordani', 'Administrador', 'seila'),
+(2, 'doug', 'dasdjasd', 'Adiministrador', 'SEILA'),
+(3, 'TESTE2', 'TESTE2', 'Adiministrador', 'SEILA');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `adm_contato`
+--
+
+CREATE TABLE `adm_contato` (
+  `ID` int(11) NOT NULL,
+  `Id_contato` int(11) DEFAULT NULL,
+  `Id_adm` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `adm_galeria`
+--
+
+CREATE TABLE `adm_galeria` (
+  `ID` int(11) NOT NULL,
+  `Id_galeria` int(11) DEFAULT NULL,
+  `Id_adm` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `agenda`
+--
+
+CREATE TABLE `agenda` (
+  `ID` int(11) NOT NULL,
+  `Id_admin` int(11) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `Evento` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contato`
+--
+
+CREATE TABLE `contato` (
+  `ID` int(11) NOT NULL,
+  `contato` varchar(50) DEFAULT NULL,
+  `Tipo` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -54,8 +104,15 @@ CREATE TABLE `fotos` (
   `ID` int(11) NOT NULL,
   `Imagen` varchar(500) DEFAULT NULL,
   `Data` date DEFAULT NULL,
-  `Idgaleria` int(11) DEFAULT NULL
+  `Id_galeria` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `fotos`
+--
+
+INSERT INTO `fotos` (`ID`, `Imagen`, `Data`, `Id_galeria`) VALUES
+(1, 'Nasus_Poro.jpg', '2018-10-17', 3);
 
 -- --------------------------------------------------------
 
@@ -71,6 +128,14 @@ CREATE TABLE `galeria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Extraindo dados da tabela `galeria`
+--
+
+INSERT INTO `galeria` (`ID`, `Nome`, `Categoria`, `Data`) VALUES
+(3, 'teste 1', NULL, NULL),
+(4, 'teste4', NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -81,11 +146,40 @@ ALTER TABLE `adm`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `adm_contato`
+--
+ALTER TABLE `adm_contato`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Id_contato` (`Id_contato`),
+  ADD KEY `Id_adm` (`Id_adm`);
+
+--
+-- Indexes for table `adm_galeria`
+--
+ALTER TABLE `adm_galeria`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Id_galeria` (`Id_galeria`),
+  ADD KEY `Id_adm` (`Id_adm`);
+
+--
+-- Indexes for table `agenda`
+--
+ALTER TABLE `agenda`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Id_admin` (`Id_admin`);
+
+--
+-- Indexes for table `contato`
+--
+ALTER TABLE `contato`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `fotos`
 --
 ALTER TABLE `fotos`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `Idgaleria` (`Idgaleria`);
+  ADD KEY `Idgaleria` (`Id_galeria`);
 
 --
 -- Indexes for table `galeria`
@@ -101,16 +195,66 @@ ALTER TABLE `galeria`
 -- AUTO_INCREMENT for table `adm`
 --
 ALTER TABLE `adm`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `adm_contato`
+--
+ALTER TABLE `adm_contato`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `adm_galeria`
+--
+ALTER TABLE `adm_galeria`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `agenda`
+--
+ALTER TABLE `agenda`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `contato`
+--
+ALTER TABLE `contato`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `fotos`
+--
+ALTER TABLE `fotos`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `galeria`
+--
+ALTER TABLE `galeria`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Limitadores para a tabela `adm_contato`
+--
+ALTER TABLE `adm_contato`
+  ADD CONSTRAINT `adm_contato_ibfk_1` FOREIGN KEY (`Id_contato`) REFERENCES `contato` (`ID`),
+  ADD CONSTRAINT `adm_contato_ibfk_2` FOREIGN KEY (`Id_adm`) REFERENCES `adm` (`ID`);
+
+--
+-- Limitadores para a tabela `adm_galeria`
+--
+ALTER TABLE `adm_galeria`
+  ADD CONSTRAINT `adm_galeria_ibfk_1` FOREIGN KEY (`Id_galeria`) REFERENCES `galeria` (`ID`),
+  ADD CONSTRAINT `adm_galeria_ibfk_2` FOREIGN KEY (`Id_adm`) REFERENCES `adm` (`ID`);
+
+--
+-- Limitadores para a tabela `agenda`
+--
+ALTER TABLE `agenda`
+  ADD CONSTRAINT `agenda_ibfk_1` FOREIGN KEY (`Id_admin`) REFERENCES `adm` (`ID`);
+
+--
 -- Limitadores para a tabela `fotos`
 --
 ALTER TABLE `fotos`
-  ADD CONSTRAINT `fotos_ibfk_1` FOREIGN KEY (`Idgaleria`) REFERENCES `galeria` (`ID`);
+  ADD CONSTRAINT `fotos_ibfk_1` FOREIGN KEY (`Id_galeria`) REFERENCES `galeria` (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
