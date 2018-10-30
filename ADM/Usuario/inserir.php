@@ -10,10 +10,13 @@ include_once("../../interface/topo.php");
 	<tr>
 	<td><label>Nome</label></td>
 	<td><input style= "COLOR:#000000"  type="text" name="Nome"/></td> </tr>
-    <tr><td><label>Email</label></td>	
-	<td><input style= "COLOR:#000000" type="text" name="Email"/></tr></td>
-	<tr><td><label>Tipo</label></td>	
-	<td><input style= "COLOR:#000000" type="text" name="Tipo"/></tr></td>
+    <tr><td><label>Nome de Usuario</label></td>	
+	<td><input style= "COLOR:#000000" type="text" name="Nome_de_usuario"/></tr></td>
+	<tr><td><label>Tipo</label> </td>
+	 <td style= "COLOR:#000000"><select name="Tipo">
+                <option value="">Selecione</option>              
+                <option value="Adiministrador">Administrador</option>
+            </select></td></tr>
 	<tr><td><label>Senha </label></td>
   <td><input style= "COLOR:#000000" type="password" name="Senha"/></td></tr>
 	<tr><td></td><td><input style= "COLOR:#000000"  type="submit" name="botao"/></td></tr>

@@ -6,7 +6,7 @@
    }
    else{
 	   $ID = $_GET["id"];
-	   $objeto = new Usuario();
+	   $objeto = new adm();
 	   $objeto->ID = $ID;
 	   $variavel = $objeto->retornarUnico();
    }
@@ -25,8 +25,8 @@
 	<tr>
 	<td><label>Nome</label></td>
 	 <td> <input style= "COLOR:#000000"  type="text" name="Nome" value="<?php echo $variavel->Nome;?>"/></td></tr>
-	  <tr><td> Email</td>
-	  <td><input style= "COLOR:#000000" type="text" name="Email" value="<?php echo $variavel->Email;?>"/><td></tr>
+	  <tr><td> Nome de usuario</td>
+	  <td><input style= "COLOR:#000000" type="text" name="Nome_de_usuario" value="<?php echo $variavel->Nome_de_usuario;?>"/><td></tr>
 	   <tr><td>Senha</td>
 	   <td><input style= "COLOR:#000000" type="password" name="Senha" value="<?php echo $variavel->Senha;?>"/></td></tr>
 	  <input type="hidden" name="ID" value="<?php echo $variavel->ID;?>"/>

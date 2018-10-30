@@ -35,8 +35,8 @@ if(!isset($_SESSION['Administrador'])){
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
-                    <li><a href="../categoria/listar.php"><i class="glyphicon glyphicon-cog"></i> Gerenciar Galeria</a></li>    
-                     <li><a href="../categoria/categorias.php"><i class="glyphicon glyphicon-plus"></i>Adicionar Galeria</a></li>				                
+                    <li><a href="../Galeria/listar.php"><i class="glyphicon glyphicon-cog"></i> Gerenciar Galeria</a></li>    
+                     <li><a href="../Galeria/galeria.php"><i class="glyphicon glyphicon-plus"></i>Adicionar Galeria</a></li>				                
 					<li><a href="../Usuario/inserir.php"><i class="fa fa-user"></i> Adicionar Usuario</a></li>          
 					<li><a href="../produto/produto.php"><i class="glyphicon glyphicon-plus"></i> Adicionar Fotos</a></li>
                   	<li><a href="../produto/listar.php"><i class="glyphicon glyphicon-list-alt"></i>Fotos</a></li>  

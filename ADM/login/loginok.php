@@ -1,7 +1,7 @@
 <?php
 	include_once("../../class/Carregar.class.php");
 	$obj = new Adm();
-	$obj->Email = $_POST["Email"];
+	$obj->Nome_de_usuario = $_POST["Nome_de_usuario"];
 	$obj->Senha = $_POST["Senha"];
 	$retorno = $obj->loginadm();
 	if ($retorno){

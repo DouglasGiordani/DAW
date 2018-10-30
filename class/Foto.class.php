@@ -1,6 +1,7 @@
 <?php
 
 class Foto{
+		
 			private $Id_galeria;
 			private $ID;
 			private $Imagen;
@@ -18,7 +19,7 @@ class Foto{
 			public function __Construct(){
 				$this->conexao = mysqli_connect("localhost","root","" ,"celenifotos")
 				or die ("Erro 404");
-				$this->tabela = "galeria";
+				$this->tabela = "fotos";
 			}
 			//fecha a conexao se deixar o banco aberto e elemina da memoria 
 			public function __destruct(){
@@ -34,9 +35,10 @@ class Foto{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO 	$this->tabela(Id_galeria,Data, Imagen) 
-				values($this->Id_galeria '$this->Data', '$this->Imagen') ";
+				$sql = "INSERT INTO $this->tabela( Imagen,Data,Id_galeria) 
+				values('$this->Imagen','$this->Data', $this->Id_galeria) ";
 				$retorno = mysqli_query ($this->conexao, $sql);
+			
 				return $retorno;
 			}
 			public function listar ($complemento = ""){
@@ -46,11 +48,11 @@ class Foto{
 				
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
-					$obj = new Produto();
-					$obj->ID = $res['ID'];
-				 	$obj->Data = $res['Data'];
-					$obj-> Imagen = $res ['Imagen'];     
-				    $obj->Id_galeria =$res['galeria'];
+					$obj = new Foto();
+					$obj->ID = $res['ID'];	
+					$obj-> Imagen = $res ['Imagen']; 
+				 	$obj->Data = $res['Data'];				    
+				    $obj->Id_galeria =$res['Id_galeria'];
 
 					
 					$arrayObj[] = $obj;
@@ -70,11 +72,11 @@ class Foto{
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){
-			 $objeto = new Produto();
-			 $objeto->ID = $resultado['ID'];
-			 $objeto->Id_galeria = $resultado['galeria'];
-			 $objeto->Data = $res['Data'];
-			 $objeto->Imagen = $resultado['Imagen'];
+			 $objeto = new Foto();
+			 $objeto->ID = $resultado['ID'];			
+			 $objeto->Data = $resultado['Data'];
+			 $objeto->Imagen = $resultado['Imagen']; 
+			 $objeto->Id_galeria = $resultado['Id_galeria'];
 							
 			 
 			 $retUsuar = $objeto;
