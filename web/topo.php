@@ -4,29 +4,29 @@
 		<title>Celeni Fotos</title>
 		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="icon" href="../interface/images/favicon.ico">
-		<link rel="shortcut icon" href="../interface/images/favicon.ico">
-		<link rel="stylesheet" href="../interface/css/stuck.css">
-		<link rel="stylesheet" href="../interface/css/owl.carousel.css">
-		<link rel="stylesheet" href="../interface/css/form.css">
-		<link rel="stylesheet" href="../interface/css/touchTouch.css">
-		<link rel="stylesheet" href="../interface/css/camera.css">
-		<link rel="stylesheet" href="../interface/css/style.css">
-		<script src="../interface/js/jquery.js"></script>
-		<script src="../interface/js/jquery-migrate-1.1.1.js"></script>
-		<script src="../interface/js/script.js"></script>
-		<script src="../interface/js/superfish.js"></script>
-		<script src="../interface/js/jquery.equalheights.js"></script>
-		<script src="../interface/js/jquery.mobilemenu.js"></script>
-		<script src="../interface/js/jquery.easing.1.3.js"></script>
-		<script src="../interface/js/tmStickUp.js"></script>
-		<script src="../interface/js/jquery.ui.totop.js"></script>
-		<script src="../interface/js/touchTouch.jquery.js"></script>
-		<script src="../interface/js/owl.carousel.js"></script>
-		<script src="../interface/js/sForm.js"></script>
-		<script src="../interface/js/camera.js"></script>
+		<link rel="icon" href="../web/images/favicon.ico">
+		<link rel="shortcut icon" href="../web/images/favicon.ico">
+		<link rel="stylesheet" href="../web/css/stuck.css">
+		<link rel="stylesheet" href="../web/css/owl.carousel.css">
+		<link rel="stylesheet" href="../web/css/form.css">
+		<link rel="stylesheet" href="../web/css/touchTouch.css">
+		<link rel="stylesheet" href="../web/css/camera.css">
+		<link rel="stylesheet" href="../web/css/style.css">
+		<script src="../web/js/jquery.js"></script>
+		<script src="../web/js/jquery-migrate-1.1.1.js"></script>
+		<script src="../web/js/script.js"></script>
+		<script src="../web/js/superfish.js"></script>
+		<script src="../web/js/jquery.equalheights.js"></script>
+		<script src="../web/js/jquery.mobilemenu.js"></script>
+		<script src="../web/js/jquery.easing.1.3.js"></script>
+		<script src="../web/js/tmStickUp.js"></script>
+		<script src="../web/js/jquery.ui.totop.js"></script>
+		<script src="../web/js/touchTouch.jquery.js"></script>
+		<script src="../web/js/owl.carousel.js"></script>
+		<script src="../web/js/sForm.js"></script>
+		<script src="../web/js/camera.js"></script>
 	
-		<script src="../interface/js/jquery.mobile.customized.min.js"></script>
+		<script src="../web/js/jquery.mobile.customized.min.js"></script>
 		<script>
 		$(document).ready(function(){
 			jQuery('#camera_wrap').camera({
@@ -68,7 +68,7 @@
 						<div class="grid_12">
 							<h1>
 								<a href="index.html">
-									<img src="../interface/images/logo.png" alt="Your Happy Family">
+									<img src="../web/images/logo.png" alt="Your Happy Family">
 								</a>
 							</h1>
 							<div class="menu_block ">

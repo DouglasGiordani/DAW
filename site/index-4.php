@@ -1,5 +1,5 @@
 <?php
- include_once("../interface/topo.php");
+ include_once("../web/topo.php");
 ?>
 		<div class="main">
 <!--=====================Content======================-->
@@ -64,5 +64,5 @@
 				</div>
 			</section>
 <?php
- include_once("../interface/rodape.php");
+ include_once("../web/rodape.php");
 ?>

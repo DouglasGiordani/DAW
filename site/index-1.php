@@ -1,9 +1,9 @@
 <?php
-	include_once("../../class/Carregar.class.php");
- include_once("../interface/topo.php");
+	include_once("../class/Carregar.class.php");
+ include_once("../web/topo.php");
 
  $obj = New Foto();
-	$resul = $obj->listar();
+	$resultado = $obj->listar();
  ?>
 		<div class="main">
 <!--=====================Content======================-->
@@ -20,40 +20,27 @@
 								<h3>Animals</h3>
 							</div>
 							<div class="clear"></div>
-							<div class="grid_4">
-								<a href="../interface/images/full4.jpg" class="gal_item">
-								<img src="../interface/images/page2_img4.jpg" alt="">
-								<div class="gal_caption">
-									<time datetime="2014-01-01">17 Feb 2014</time>
+								
+								<?php
+								foreach($resultado as $local){	
+									echo ("<div class='grid_4'>
+										<a href='../Imagen/$local->Imagen' class='gal_item'>
+										<img src='../Imagen/$local->Imagen'	 alt=''>
+								
+								<div class='gal_caption'>
+									<time>$local->Data</time>
 								</div>
-								<span class="gal_magnify"></span>
-								</a>
-							</div>
-							<div class="grid_4">
-								<a href="../interface/images/full5.jpg" class="gal_item">
-									<img src="../interface/images/page2_img5.jpg" alt="">
-									<div class="gal_caption">
-										<time datetime="2014-01-01">20 Feb 2014</time>
-									</div>
-									<span class="gal_magnify"></span>
-								</a>
-							</div>
-							<div class="grid_4">
-								<a href="../interface/images/full6.jpg" class="gal_item">
-									<img src="../interface/images/page2_img6.jpg" alt="">
-									<div class="gal_caption">
-										<time datetime="2014-01-01">24 Feb 2014</time>
-									</div>
-									<span class="gal_magnify"></span>
-								</a>
-							</div>
+								<span class='gal_magnify'></span>
+								</a></div>");}?>
+							
+							
 							<div class="grid_4">
 								<h3>Nature</h3>
 							</div>
 							<div class="clear"></div>
 							<div class="grid_4">
-								<a href="../interface/images/full7.jpg" class="gal_item">
-									<img src="../interface/images/page2_img7.jpg" alt="">
+								<a href="../web/images/full7.jpg" class="gal_item">
+									<img src="../web/images/page2_img7.jpg" alt="">
 									<div class="gal_caption">
 										<time datetime="2014-01-01">01 Mar 2014</time>
 									</div>
@@ -61,8 +48,8 @@
 								</a>
 							</div>
 							<div class="grid_4">
-								<a href="../interface/images/full8.jpg" class="gal_item">
-									<img src="../interface/images/page2_img8.jpg" alt="">
+								<a href="../web/images/full8.jpg" class="gal_item">
+									<img src="../web/images/page2_img8.jpg" alt="">
 									<div class="gal_caption">
 										<time datetime="2014-01-01">10 Mar 2014</time>
 									</div>
@@ -70,8 +57,8 @@
 								</a>
 							</div>
 							<div class="grid_4">
-								<a href="../interface/images/full9.jpg" class="gal_item">
-									<img src="../interface/images/page2_img9.jpg" alt="">
+								<a href="../web/images/full9.jpg" class="gal_item">
+									<img src="../web/images/page2_img9.jpg" alt="">
 									<div class="gal_caption">
 										<time datetime="2014-01-01">25 Mar 2014</time>
 									</div>
@@ -83,5 +70,5 @@
 				</div>
 			</section>
 <?php
- include_once("../interface/rodape.php");
+ include_once("../web/rodape.php");
 ?>

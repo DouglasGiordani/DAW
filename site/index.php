@@ -1,10 +1,10 @@
 <?php
- include_once("../interface/topo.php");
+ include_once("../web/topo.php");
 ?>
 		<div class="main">
 			<div class="slider_wrapper">
 				<div id="camera_wrap" class="">
-					<div data-src="../interface/images/slide.jpg">
+					<div data-src="../web/images/slide.jpg">
 						<div class="caption fadeIn">
 							<div class="title">Love</div>
 							<p>In mollis erat mattis neque facilisis, sit amet ultricies erat rutrumras  facilisis nulla vel viverra auctor, leo magna sodales felis, quis malesuada ibh odio ut velit. Proin pharetra luctus diam, a scelerisque eros convallis</p>
@@ -12,7 +12,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div data-src="../interface/images/slide1.jpg">
+					<div data-src="../web/images/slide1.jpg">
 						<div class="caption fadeIn">
 							<div class="title">Nude Art</div>
 							<p>In mollis erat mattis neque facilisis, sit amet ultricies erat rutrumras  facilisis nulla vel viverra auctor, leo magna sodales felis, quis malesuada ibh odio ut velit. Proin pharetra luctus diam, a scelerisque eros convallis</p>
@@ -20,7 +20,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div data-src="../interface/images/slide2.jpg">
+					<div data-src="../web/images/slide2.jpg">
 						<div class="caption fadeIn">
 							<div class="title">In Motion</div>
 							<p>In mollis erat mattis neque facilisis, sit amet ultricies erat rutrumras  facilisis nulla vel viverra auctor, leo magna sodales felis, quis malesuada ibh odio ut velit. Proin pharetra luctus diam, a scelerisque eros convallis</p>
@@ -53,43 +53,43 @@
 							<div class="gallery">
 								<div class="row">
 									<div class="grid_4">
-										<a href="../interface/images/big1.jpg" class="gal_item">
-											<img src="../interface/images/page1_img1.jpg" alt="">
+										<a href="../web/images/big1.jpg" class="gal_item">
+											<img src="../web/images/page1_img1.jpg" alt="">
 											<div class="gal_caption">People</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
-										<a href="../interface/images/big2.jpg" class="gal_item">
-											<img src="../interface/images/page1_img2.jpg" alt="">
+										<a href="../web/images/big2.jpg" class="gal_item">
+											<img src="../web/images/page1_img2.jpg" alt="">
 											<div class="gal_caption">Fashion</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
-										<a href="../interface/images/big3.jpg" class="gal_item">
-											<img src="../interface/images/page1_img3.jpg" alt="">
+										<a href="../web/images/big3.jpg" class="gal_item">
+											<img src="../web/images/page1_img3.jpg" alt="">
 											<div class="gal_caption">Wedding</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
-										<a href="../interface/images/big4.jpg" class="gal_item">
-											<img src="../interface/images/page1_img4.jpg" alt="">
+										<a href="../web/images/big4.jpg" class="gal_item">
+											<img src="../web/images/page1_img4.jpg" alt="">
 											<div class="gal_caption">Interior</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
-										<a href="../interface/images/big5.jpg" class="gal_item">
-											<img src="../interface/images/page1_img5.jpg" alt="">
+										<a href="../web/images/big5.jpg" class="gal_item">
+											<img src="../web/images/page1_img5.jpg" alt="">
 											<div class="gal_caption">Animals</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
-										<a href="../interface/images/big6.jpg" class="gal_item">
-											<img src="../interface/images/page1_img6.jpg" alt="">
+										<a href="../web/images/big6.jpg" class="gal_item">
+											<img src="../web/images/page1_img6.jpg" alt="">
 											<div class="gal_caption">Nature</div>
 											<span class="gal_magnify"></span>
 										</a>
@@ -158,22 +158,22 @@
 					</div>
 				</div>
 				<div id="owl">
-					<div class="item"><img src="../interface/images/car_img1.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img2.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img3.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img4.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img5.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img6.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img7.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img1.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img2.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img3.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img4.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img5.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img6.jpg" alt=""></div>
-					<div class="item"><img src="../interface/images/car_img7.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img1.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img2.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img3.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img4.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img5.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img6.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img7.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img1.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img2.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img3.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img4.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img5.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img6.jpg" alt=""></div>
+					<div class="item"><img src="../web/images/car_img7.jpg" alt=""></div>
 				</div>
 			</section>
 <?php
- include_once("../interface/rodape.php");
+ include_once("../web/rodape.php");
 ?>
