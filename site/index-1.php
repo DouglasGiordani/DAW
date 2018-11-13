@@ -15,15 +15,18 @@
 								<h3>People</h3>
 							</div>
 							<div class="clear"></div>
+							<?php	
 							
-							<div class="grid_4">
-								<h3>Animals</h3>
+									echo ("
+								<div class='grid_4'>
+								<h3>$resultado->Id_galeria</h3>	
 							</div>
-							<div class="clear"></div>
-								
-								<?php
+							<div class='clear'></div>
+								");
+							
 								foreach($resultado as $local){	
-									echo ("<div class='grid_4'>
+									echo ("
+							<div class='grid_4'>
 										<a href='../Imagen/$local->Imagen' class='gal_item'>
 										<img src='../Imagen/$local->Imagen'	 alt=''>
 								

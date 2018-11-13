@@ -52,7 +52,7 @@ class Foto{
 					$obj->ID = $res['ID'];	
 					$obj-> Imagen = $res ['Imagen']; 
 				 	$obj->Data = $res['Data'];				    
-				    $obj->Id_galeria =$res['Id_galeria'];
+				    $obj->Id_galeria =$res['galeria'];
 
 					
 					$arrayObj[] = $obj;
@@ -76,7 +76,7 @@ class Foto{
 			 $objeto->ID = $resultado['ID'];			
 			 $objeto->Data = $resultado['Data'];
 			 $objeto->Imagen = $resultado['Imagen']; 
-			 $objeto->Id_galeria = $resultado['Id_galeria'];
+			 $objeto->Id_galeria = $resultado['galeria'];
 							
 			 
 			 $retUsuar = $objeto;
