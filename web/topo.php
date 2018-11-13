@@ -67,18 +67,18 @@
 					<div class="row">
 						<div class="grid_12">
 							<h1>
-								<a href="index.html">
-									<img src="../web/images/logo.png" alt="Your Happy Family">
+								<a href="index.php">
+									<img src="../Imagen/download (1).png" alt="Your Happy Family">
 								</a>
 							</h1>
 							<div class="menu_block ">
 								<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 									<ul class="sf-menu">
-										<li><a href="../site/index.php">About</a></li>
-										<li><a href="../site/index-1.php">Portfolio</a></li>
-										<li class="current"><a href="../site/index-2.php">Resume</a></li>
+										<li><a href="../site/index.php">inicio</a></li>
+										<li><a href="../site/galeria.php">Galeria</a></li>
+										<li><a href="../site/index-2.php">Resume</a></li>
 										<li><a href="../site/index-3.php">Blog</a></li>
-										<li><a href="../site/index-4.php">Contacts</a></li>
+										<li><a href="../site/contato.php">Contato</a></li>
 									</ul>
 								</nav>
 								<div class="clear"></div>
