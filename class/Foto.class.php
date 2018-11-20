@@ -62,6 +62,7 @@ class Foto{
 				
 			}
 			
+			
 					
 					
 			public function retornarUnico(){

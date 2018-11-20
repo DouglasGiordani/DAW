@@ -25,6 +25,8 @@
 		<script src="../web/js/owl.carousel.js"></script>
 		<script src="../web/js/sForm.js"></script>
 		<script src="../web/js/camera.js"></script>
+		<script src="../web/js/main.js"></script>
+	
 	
 		<script src="../web/js/jquery.mobile.customized.min.js"></script>
 		<script>
@@ -56,6 +58,7 @@
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			$('#stuck_container').tmStickUp({});
 		});
+
 		</script>
 	
 	</head>

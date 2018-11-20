@@ -4,6 +4,10 @@
 
  $obj = New Foto();
 	$resultado = $obj->listar();
+	
+	
+	$objgaleria =New Galeria();
+	 $resul = $objgaleria->listar();
  ?>
 		<div class="main">
 <!--=====================Content======================-->
@@ -11,21 +15,26 @@
 				<div class="container"><div class="ic">More Website Templates @ TemplateMonster.com - May 05, 2014!</div>
 					<div class="gallery gall__1">
 						<div class="row">
-							<div class="grid_4">
-								<h3>People</h3>
-							</div>
+							
 							<div class="clear"></div>
+							<div class='grid_4 filter-tope-group'>
+								<button class="how-active1" data-filter="*">
+									Todas as Fotos
+									</button>
 							<?php	
+								foreach($resul as $local){	
+									echo ("<button class='' data-filter='.$local->Nome'>
+									$local->Nome
+									</button>");}
+								?>
+								</div>
 							
-									echo ("
-								<div class='grid_4'>
-								<h3>$resultado->Id_galeria</h3>	
-							</div>
+							<div class="row isotope-grid">
+							
+							<?php	
+        					foreach($resultado as $local){	
+									echo ("<div class='grid_4 isotope-item  $local->Id_galeria'>													
 							<div class='clear'></div>
-								");
-							
-								foreach($resultado as $local){	
-									echo ("
 							<div class='grid_4'>
 										<a href='../Imagen/$local->Imagen' class='gal_item'>
 										<img src='../Imagen/$local->Imagen'	 alt=''>
@@ -34,9 +43,9 @@
 									<time>$local->Data</time>
 								</div>
 								<span class='gal_magnify'></span>
-								</a></div>");}?>
-							
-							
+								</a></div>	</div>");}
+							?>
+							</div>
 							<div class="grid_4">
 								<h3>Nature</h3>
 							</div>
