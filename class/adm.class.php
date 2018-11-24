@@ -32,7 +32,7 @@ class adm{
 			}
 			public function inserir(){
 				$sql = "INSERT INTO $this->tabela(Nome, Nome_de_usuario, Tipo, Senha) 
-				values('$this->Nome', '$this->Nome_de_usuario', '$this->Tipo','$this->Senha') ";
+				values('$this->Nome', '$this->Nome_de_usuario', '$this->Tipo','$this->cripo') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
