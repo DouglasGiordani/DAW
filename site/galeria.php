@@ -12,10 +12,10 @@
 		<div class="main">
 <!--=====================Content======================-->
 			<section class="content cont_pad1">
-				<div class="container"><div class="ic">More Website Templates @ TemplateMonster.com - May 05, 2014!</div>
+				<div class="container"><div class="ic"></div>
 					<div class="gallery gall__1">
 						<div class="row">
-							
+							</br></br></br></br>
 							<div class="clear"></div>
 							<div class='grid_4 filter-tope-group'>
 								<button class="how-active1" data-filter="*">
