@@ -12,7 +12,7 @@ include_once("../../interface/topo.php");
 	
 	if ($retorno)
 		
-		echo "Usuário cadastrado com sucesso";
+		echo "Contato cadastrado com sucesso";
 	else
 		print_r($obj);
 	?>

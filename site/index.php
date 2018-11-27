@@ -1,5 +1,9 @@
 <?php
+include_once("../class/Carregar.class.php");
  include_once("../web/topo.php");
+ 
+  $obj = New Foto();
+	$resultado = $obj->listar();	
 ?>
 		<div class="main">
 			<div class="slider_wrapper">
@@ -35,57 +39,31 @@
 				<div class="container"><div class="ic"></div>
 					<div class="row">
 						<div class="grid_12">
-							<h2>Portfolio</h2>
+							<h2>Fotos</h2>
 							<div class="gallery">
 								<div class="row">
-									<div class="grid_4">
-										<a href="../web/images/big1.jpg" class="gal_item">
-											<img src="../web/images/page1_img1.jpg" alt="">
-											<div class="gal_caption">People</div>
-											<span class="gal_magnify"></span>
+								<?php 
+								foreach($resultado as $local){	
+									echo ("
+									<div class='grid_4'>
+										<a href='../Imagen/$local->Imagen' class='gal_item'>
+											<img src='../Imagen/$local->Imagen' alt=''>
+											<div class='gal_caption'><time>$local->Data</time></div>
+											<span class='gal_magnify'></span>
 										</a>
 									</div>
-									<div class="grid_4">
-										<a href="../web/images/big2.jpg" class="gal_item">
-											<img src="../web/images/page1_img2.jpg" alt="">
-											<div class="gal_caption">Fashion</div>
-											<span class="gal_magnify"></span>
-										</a>
-									</div>
-									<div class="grid_4">
-										<a href="../web/images/big3.jpg" class="gal_item">
-											<img src="../web/images/page1_img3.jpg" alt="">
-											<div class="gal_caption">Wedding</div>
-											<span class="gal_magnify"></span>
-										</a>
-									</div>
-									<div class="grid_4">
-										<a href="../web/images/big4.jpg" class="gal_item">
-											<img src="../web/images/page1_img4.jpg" alt="">
-											<div class="gal_caption">Interior</div>
-											<span class="gal_magnify"></span>
-										</a>
-									</div>
-									<div class="grid_4">
-										<a href="../web/images/big5.jpg" class="gal_item">
-											<img src="../web/images/page1_img5.jpg" alt="">
-											<div class="gal_caption">Animals</div>
-											<span class="gal_magnify"></span>
-										</a>
-									</div>
-									<div class="grid_4">
-										<a href="../web/images/big6.jpg" class="gal_item">
-											<img src="../web/images/page1_img6.jpg" alt="">
-											<div class="gal_caption">Nature</div>
-											<span class="gal_magnify"></span>
-										</a>
-									</div>
+								");}
+								?>
 								</div>
 							</div>
 						</div>
 						<div class="clear"></div>
 					
+			
+			</div>
+			</div>
 			</section>
+			</div>
 <?php
  include_once("../web/rodape.php");
 ?>

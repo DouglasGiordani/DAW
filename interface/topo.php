@@ -40,6 +40,8 @@ if(!isset($_SESSION['Administrador'])){
 					<li><a href="../Usuario/inserir.php"><i class="fa fa-user"></i> Adicionar Usuario</a></li>          
 					<li><a href="../produto/produto.php"><i class="glyphicon glyphicon-plus"></i> Adicionar Fotos</a></li>
                   	<li><a href="../produto/listar.php"><i class="glyphicon glyphicon-list-alt"></i>Fotos</a></li>  
+					 	<li><a href="../contato/contato.php"><i class="glyphicon glyphicon-list-alt"></i>Adicionar Contato</a></li>  
+						<li><a href="../contato/listar.php"><i class="glyphicon glyphicon-cog"></i>Gerenciar Contato</a></li>  
                 </ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown messages-dropdown">

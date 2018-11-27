@@ -3,7 +3,8 @@
 class Contato{
 			private $ID;
 			private $contato;
-			private $Tipo;
+			private $Endereco;
+			private $Email;
 			
 		
 			
@@ -33,21 +34,24 @@ class Contato{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO 	$this->tabela(ID,contato, Tipo) 
-				values($this->ID '$this->contato', '$this->Tipo') ";
+				$sql = "INSERT INTO $this->tabela(contato, Endereco, Email) 
+				values('$this->contato', '$this->Endereco', '$this->Email')";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
-			public function listar ($complemento = ""){
-				$sql = "SELECT $this->tabela";
+			
+			
+			public function listar (){
+				$sql = "SELECT * FROM $this->tabela";
 				$retorno = mysqli_query($this->conexao, $sql);
 				
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
-					$obj = new Produto();
-					$obj->ID = $res['ID'];
-				 	$obj->contato = $res['contato'];
-					$obj-> Tipo = $res ['Tipo'];     
+				    $obj = new Contato();
+					$obj->ID = $resultado['ID'];
+				 	$obj-> contato = $resultado['contato'];
+					$obj-> Endereco = $resultado ['Endereco'];
+					$obj-> Email = $resultado ['Email']; 	   					
 				   
 
 					
@@ -69,9 +73,8 @@ class Contato{
 			 $objeto = new contato();
 			 $objeto->ID = $resultado['ID'];
 			 $objeto->contato = $resultado['contato'];
-			 $objeto->Tipo = $resultado['Tipo'];
-			
-							
+			 $objeto->Endereco = $resultado['Endereco'];
+			 $objeto->Email = $resultado['Email'];				
 			 
 			 $retUsuar = $objeto;
 		 }

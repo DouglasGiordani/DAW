@@ -61,7 +61,24 @@ class Foto{
 				return $arrayObj;
 				
 			}
-			
+			public function listarprincipal() {
+				$sql = "SELECT * FROM $this->tabela LIMIT 6 ";
+				$retorno = mysqli_query($this->conexao, $sql);
+				
+				$arrayObj = NULL;
+				while($res = mysqli_fetch_assoc($retorno)){
+					$obj = new Foto();
+					$obj->ID = $res['ID'];	
+					$obj-> Imagen = $res ['Imagen']; 
+				 	$obj->Data = $res['Data'];				    
+
+					
+					$arrayObj[] = $obj;
+					
+				}
+				return $arrayObj;
+				
+			}
 			
 					
 					
