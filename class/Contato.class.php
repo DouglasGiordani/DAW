@@ -48,10 +48,9 @@ class Contato{
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
 				    $obj = new Contato();
-					$obj->ID = $resultado['ID'];
-				 	$obj-> contato = $resultado['contato'];
-					$obj-> Endereco = $resultado ['Endereco'];
-					$obj-> Email = $resultado ['Email']; 	   					
+				 	$obj-> contato = $res['contato'];
+					$obj-> Endereco = $res['Endereco'];
+					$obj-> Email = $res ['Email']; 	   					
 				   
 
 					

@@ -21,7 +21,7 @@
 			
 				<table align="center" border="3" width="50%">
 					<thead>
-						<th class="tituloTabela">ID</th>
+					
 						<th class="tituloTabela">Contato</th>
 						<th class="tituloTabela">Endereço</th>
 						<th class="tituloTabela">Email</th>
@@ -32,7 +32,7 @@
 					<?php
 						foreach($resultado as $local){
 							echo UTF8_encode("<tr>
-							<td>$local->ID</td>
+						
 							<td>$local->contato</td>
 							<td>$local->Endereco</td>
 							<td>$local->Email</td>
