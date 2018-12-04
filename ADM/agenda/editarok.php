@@ -1,14 +1,14 @@
 <?php
 	include_once("../../class/Carregar.class.php");
 	include_once("../../interface/topo.php");
-	$objcontato = new Contato();
-	$objcontato->ID = $_POST["ID"];
-	$objcontato->contato = $_POST["contato"];
-	$objcontato->Endereco = $_POST["Endereco"];
-	$objcontato->Email = $_POST["Email"];
+	$obj = new agenda();
+	$obj->ID = $_POST["ID"];
+    $obj->Id_admin = $_POST["Id_admin"];
+	$obj->data = $_POST["data"];
+	$obj->Evento = $_POST["Evento"];
 	
 	
- 	$retorno = $objcontato->editar();
+ 	$retorno = $obj->editar();
 	if($retorno)
 		echo "Editado com sucesso";
 	else
