@@ -1,6 +1,6 @@
 <?php
 
-class Contato{
+class Agenda{
 			private $ID;
 			private $Id_admin;
 			private $data;
@@ -33,21 +33,22 @@ class Contato{
 				$this->$key = $value;
 			}
 			public function inserir(){
-				$sql = "INSERT INTO 	$this->tabela(ID,Id_admin, data, Evento) 
-				values($this->ID '$this->Id_admin', '$this->data', '$this->Evento') ";
+				$sql = "INSERT INTO 	$this->tabela(Id_admin, data, Evento) 
+				values('$this->Id_admin', '$this->data', '$this->Evento') ";
 				$retorno = mysqli_query ($this->conexao, $sql);
 				return $retorno;
 			}
 			public function listar ($complemento = ""){
-				$sql = "SELECT $this->tabela";
+				$sql = "SELECT $this->tabela.*,ADM.Nome as ADM FROM 
+				$this->tabela INNER JOIN ADM ON $this->tabela.Id_admin= ADM.ID ".$complemento;;
 				$retorno = mysqli_query($this->conexao, $sql);
 				
 				$arrayObj = NULL;
 				while($res = mysqli_fetch_assoc($retorno)){
-					$obj = new Produto();
+					$obj = new Agenda();
 					$obj->ID = $res['ID'];
-				 	$obj->Id_admin = $res['Id_admin'];
-					$obj-> data = $res ['data'];   
+				 	$obj->Id_admin = $res['ADM'];
+					$obj->data = $res['data'];   
 					$obj-> Evento = $res ['Evento'];    					
 				   
 
@@ -67,7 +68,7 @@ class Contato{
 		 //separa as colunas como o banco
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){
-			 $objeto = new agenda();
+			 $objeto = new Agenda();
 			 $objeto->ID = $resultado['ID'];
 			$objeto->Id_admin = $resultado['Id_admin'];
 			$objeto-> data = $resultado ['data'];   

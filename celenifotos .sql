@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 31-Out-2018 às 00:34
+-- Generation Time: 04-Dez-2018 às 22:57
 -- Versão do servidor: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -42,8 +42,8 @@ CREATE TABLE `adm` (
 
 INSERT INTO `adm` (`ID`, `Nome`, `Nome_de_usuario`, `Tipo`, `Senha`) VALUES
 (1, 'douglas', 'douglasgiordani', 'Administrador', 'seila'),
-(2, 'doug', 'dasdjasd', 'Adiministrador', 'SEILA'),
-(3, 'TESTE2', 'TESTE2', 'Adiministrador', 'SEILA');
+(3, 'TESTE2', 'TESTE2', 'Adiministrador', 'SEILA'),
+(19, 'daniel', 'daniel120', 'Administrador', '202cb962ac59075b964b');
 
 -- --------------------------------------------------------
 
@@ -82,6 +82,13 @@ CREATE TABLE `agenda` (
   `Evento` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `agenda`
+--
+
+INSERT INTO `agenda` (`ID`, `Id_admin`, `data`, `Evento`) VALUES
+(2, 3, '2018-12-19', 'tirar do bronce a lucelia');
+
 -- --------------------------------------------------------
 
 --
@@ -91,8 +98,16 @@ CREATE TABLE `agenda` (
 CREATE TABLE `contato` (
   `ID` int(11) NOT NULL,
   `contato` varchar(50) DEFAULT NULL,
-  `Tipo` varchar(50) DEFAULT NULL
+  `Endereco` varchar(50) DEFAULT NULL,
+  `Email` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`ID`, `contato`, `Endereco`, `Email`) VALUES
+(1, 'ewqe', 'eqweqw', 'giordani@outlook.com');
 
 -- --------------------------------------------------------
 
@@ -112,7 +127,11 @@ CREATE TABLE `fotos` (
 --
 
 INSERT INTO `fotos` (`ID`, `Imagen`, `Data`, `Id_galeria`) VALUES
-(1, 'Nasus_Poro.jpg', '2018-10-17', 3);
+(1, 'Nasus_Poro.jpg', '2018-10-17', 3),
+(7, 'image.jpg', '2018-11-23', 3),
+(8, 'image.jpg', '2018-11-07', 3),
+(9, 'logo.png', '2018-11-02', 3),
+(11, 'download.jpg', '2018-11-05', 4);
 
 -- --------------------------------------------------------
 
@@ -133,7 +152,8 @@ CREATE TABLE `galeria` (
 
 INSERT INTO `galeria` (`ID`, `Nome`, `Categoria`, `Data`) VALUES
 (3, 'teste 1', NULL, NULL),
-(4, 'teste4', NULL, NULL);
+(4, 'teste4', NULL, NULL),
+(5, 'Prof bronce', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -195,7 +215,7 @@ ALTER TABLE `galeria`
 -- AUTO_INCREMENT for table `adm`
 --
 ALTER TABLE `adm`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `adm_contato`
 --
@@ -210,17 +230,17 @@ ALTER TABLE `adm_galeria`
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `fotos`
 --
 ALTER TABLE `fotos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `galeria`
 --

@@ -4,6 +4,9 @@ include_once("../class/Carregar.class.php");
  
  $obj = New Contato();
 	$resul = $obj->listar();
+	
+		$objagenda = New Agenda();
+	$resultado = $objagenda->listar();
 ?>
 		<div class="main">
 <!--=====================Content======================-->
@@ -20,11 +23,19 @@ include_once("../class/Carregar.class.php");
 						<div class="clear"></div>
 						<?php foreach($resul as $local){	
 						echo("
-						<div class='grid_5'>
-							<h3>Contact Info</h3>
+						<div class='grid_3'>
+							<h3>Contato</h3>
 							Telefone: $local->contato<br>
 							Endreço: $local->Endereco<br>
 							E-mail: $local->Email
+						</div>");}?>
+								<?php foreach($resultado as $local){	
+						echo("
+						<div class='grid_3'>
+							<h3>Agenda de onde estarei</h3>
+							Pessoa Responsável: $local->Id_admin<br>
+							Data: $local->data<br>
+							Evento: $local->Evento
 						</div>");}?>
 						<div class="grid_6 preffix_1">
 							<h3>Contact Form</h3>
@@ -60,6 +71,8 @@ include_once("../class/Carregar.class.php");
 								</div>
 							</form>
 						</div>
+					
+				
 					</div>
 				</div>
 			</section>

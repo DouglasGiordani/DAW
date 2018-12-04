@@ -16,7 +16,7 @@ include_once("../../interface/topo.php");
 	<tr><td><label>Tipo</label> </td>
 	 <td style= "COLOR:#000000"><select name="Tipo">
                 <option value="">Selecione</option>              
-                <option value="Adiministrador">Administrador</option>
+                <option value="Administrador">Administrador</option>
             </select></td></tr>
 	<tr><td><label>Senha </label></td>
   <td><input style= "COLOR:#000000" type="password" name="Senha"/></td></tr>

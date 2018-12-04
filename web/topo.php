@@ -81,7 +81,7 @@
 									<ul class="sf-menu">
 										<li><a href="../site/index.php">inicio</a></li>
 										<li><a href="../site/galeria.php">Galeria</a></li>
-										<li><a href="../site/index-2.php">Resume</a></li>
+										
 										<li><a href="../site/Blog.php">Blog</a></li>
 										<li><a href="../site/contato.php">Contato</a></li>
 									</ul>
