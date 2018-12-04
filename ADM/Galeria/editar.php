@@ -19,11 +19,11 @@
 <html>
 <head></head>
 <body>
-<h1> <center> Editar Categorias</center></h1>
+<h1> <center> Editar Galerias</center></h1>
    <form  align="center" method="POST" action="editarok.php">   
-	   Nome: <input align="center" type="text" name="Nome" value="<?php echo $variavel->Nome;?>"/><br/>
-	  <input type="hidden" name="ID" value="<?php echo $variavel->ID;?>"/>
-	  <input type="submit" name="Alterar"/>
+	   Nome: <input align="center" type="text"  style="color: black" name="Nome" value="<?php echo $variavel->Nome;?>"/><br/>
+	  <input type="hidden" style="color: black" name="ID" value="<?php echo $variavel->ID;?>"/>
+	  <input type="submit"  style="color: black" name="Alterar"/>
 	   
    </form>
 		

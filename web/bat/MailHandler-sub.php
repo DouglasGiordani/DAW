@@ -5,9 +5,7 @@
 
 	$name=$_POST['name'];
 	$email=$_POST['email'];
-	$owner=$_POST['owner'];
-	$owner_email=$_POST['owner_email'];
-	$sitename=$_POST['sitename'];
+	
 	$sbj_visitor.=$sitename;
 	$sbj_owner.=$sitename;
 	

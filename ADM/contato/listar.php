@@ -17,7 +17,7 @@
 		</style>
 		</head>
 			<body>
-			<h1> <center>Galerias</center></h1>
+			<h1> <center>Contatos</center></h1>
 			
 				<table align="center" border="3" width="50%">
 					<thead>

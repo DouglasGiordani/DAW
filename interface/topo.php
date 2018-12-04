@@ -4,7 +4,7 @@ if(!isset($_SESSION['Administrador'])){
 	header ("Location:../login/login.php");
 }
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
