@@ -42,7 +42,7 @@ CREATE TABLE `adm` (
 
 INSERT INTO `adm` (`ID`, `Nome`, `Nome_de_usuario`, `Tipo`, `Senha`) VALUES
 (1, 'douglas', 'douglasgiordani', 'Administrador', 'seila'),
-(3, 'TESTE2', 'TESTE2', 'Adiministrador', 'SEILA'),
+(3, 'TESTE2', 'TESTE2', 'Administrador', 'SEILA'),
 (19, 'daniel', 'daniel120', 'Administrador', '202cb962ac59075b964b');
 
 -- --------------------------------------------------------
