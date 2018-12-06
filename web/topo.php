@@ -26,6 +26,9 @@
 		<script src="../web/js/sForm.js"></script>
 		<script src="../web/js/camera.js"></script>
 		<script src="../web/js/main.js"></script>
+		
+		
+
 	
 	
 		<script src="../web/js/jquery.mobile.customized.min.js"></script>

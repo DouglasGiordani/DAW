@@ -1,4 +1,8 @@
-
+<?php
+ include_once("../../class/recaptchalib.php");
+ 
+ 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -21,6 +25,7 @@
     <link href="css/signin.css" rel="stylesheet">
 
     <script src="js/ie-emulation-modes-warning.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
    
   </head>
@@ -35,6 +40,7 @@
         <input type="text" name="Nome_de_usuario" id="inputEmail" class="form-control" placeholder="Nome de usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" name="Senha" id="inputPassword" class="form-control" placeholder="Senha" required>
+		<div class="g-recaptcha" data-sitekey="6LenSX8UAAAAAEsJqT3yqfMzBAFSU-fMAdFWMDjf"></div>
         <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
       </form>
 

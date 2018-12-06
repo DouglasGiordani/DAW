@@ -18,6 +18,7 @@ if(!isset($_SESSION['Administrador'])){
 
     <script type="text/javascript" src="../../interface/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="../../interface/bootstrap/js/bootstrap.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
 
 </head>

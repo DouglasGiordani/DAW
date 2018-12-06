@@ -88,9 +88,10 @@ class adm{
 		 return $retorno;
 		 }
 		 	public function loginadm(){
-		 $sql = "SELECT * FROM $this->tabela where Nome_de_usuario='$this->Nome_de_usuario' and Senha='$this->Senha' and Tipo='Administrador'";
+		 $sql = "SELECT * FROM $this->tabela where Nome_de_usuario='$this->Nome_de_usuario' and Senha='$this->cripo' and Tipo='Administrador'";
 		 $retorno = mysqli_query($this->conexao, $sql);
-		 //separa as colunas como o banco
+		 
+			
 		 $resultado = mysqli_fetch_assoc($retorno);
 		 if($resultado){ 
 			 $objeto = new adm();
