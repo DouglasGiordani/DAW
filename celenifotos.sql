@@ -45,6 +45,7 @@ INSERT INTO `adm` (`ID`, `Nome`, `Nome_de_usuario`, `Tipo`, `Senha`) VALUES
 (3, 'TESTE2', 'TESTE2', 'Administrador', 'SEILA'),
 (19, 'daniel', 'daniel120', 'Administrador', '6e7b2ce2952496d9a8968259e8c2a3d4');
 
+
 -- --------------------------------------------------------
 
 --
