@@ -11,7 +11,7 @@
 	   $variavel = $objeto->retornarUnico();
    }
    $objgaleria = New Galeria();
-	$resultado = $objgaleira->listar();
+	$resultado = $objgaleria->listar();
 ?>
 
 
@@ -19,16 +19,13 @@
 <html>
 <head></head>
 <body>
-<h1> <center> Editar Produtos</center></h1>
+<h1> <center> Editar Fotos</center></h1>
    <form method="POST" action="editarok.php"  enctype="multipart/form-data">
       <table border="4" align="center" >
 	<tr>
-	<td><label>Nome</label></td>
-	<td><input style= "COLOR:#000000" type="text" name="Nome" value="<?php echo $variavel->Nome;?>"/></td></tr>
+
 	  <tr><td><label> Data<label></td>
-	  <td><input style= "COLOR:#000000" type="date" name="Data" value="<?php echo $variavel->Preco;?>"/><td></tr>
-	   <tr><td><label>Descricao</label></td> 
-	   <td><input style= "COLOR:#000000" type="text" name="Descricao" value="<?php echo $variavel->Descricao;?>"/></td></tr>
+	  <td><input style= "COLOR:#000000" type="date" name="Data" value="<?php echo $variavel->Data;?>"/><td></tr>
 	<tr><td><label>Galeria</label></td>
 	<td><select  style= "COLOR:#000000" name="Id_galeria"/> 
 	    <option style= "COLOR:#000000" value="">Selecione</option>

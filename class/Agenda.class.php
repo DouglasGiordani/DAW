@@ -83,8 +83,10 @@ class Agenda{
 		 return $retUsuar;
 	 }
 	 
-	 public function editar(){
-		 $sql = "UPDATE $this->tabela SET ID = $this->ID, WHERE ID = $this->ID";
+	  public function editar(){
+		 $sql = "UPDATE $this->tabela SET
+		 Id_admin = '$this->Id_admin', data = '$this->data',
+		  Evento = '$this->Evento' WHERE ID=$this->ID";
 		 $retorno = mysqli_query($this->conexao,$sql);
 		 return $retorno;
 	 }

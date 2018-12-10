@@ -50,7 +50,7 @@ class Foto{
 				while($res = mysqli_fetch_assoc($retorno)){
 					$obj = new Foto();
 					$obj->ID = $res['ID'];	
-					$obj-> Imagen = $res ['Imagen']; 
+					$obj->Imagen = $res ['Imagen']; 
 				 	$obj->Data = $res['Data'];				    
 				    $obj->Id_galeria =$res['galeria'];
 
@@ -69,7 +69,7 @@ class Foto{
 				while($res = mysqli_fetch_assoc($retorno)){
 					$obj = new Foto();
 					$obj->ID = $res['ID'];	
-					$obj-> Imagen = $res ['Imagen']; 
+					$obj->Imagen = $res ['Imagen']; 
 				 	$obj->Data = $res['Data'];				    
 
 					
@@ -83,7 +83,7 @@ class Foto{
 					
 					
 			public function retornarUnico(){
-		 $sql = "SELECT $this->tabela.*,galeria.Nome as galeriaFROM 
+		 $sql = "SELECT $this->tabela.*,galeria.Nome as galeria FROM 
 				$this->tabela INNER JOIN galeria ON $this->tabela.Id_galeria = galeria.ID
 				where $this->tabela.ID=$this->ID";
 		 $retorno = mysqli_query($this->conexao, $sql);
@@ -105,8 +105,9 @@ class Foto{
 		 return $retUsuar;
 	 }
 	 
-	 public function editar(){
-		 $sql = "UPDATE $this->tabela SET Id_galeria = $this->Id_galeria, WHERE ID = $this->ID";
+		  public function editar(){
+		 $sql = "UPDATE $this->tabela SET
+		 Data = '$this->Data' ,	 Id_galeria = '$this->Id_galeria' WHERE ID=$this->ID";
 		 $retorno = mysqli_query($this->conexao,$sql);
 		 return $retorno;
 	 }
