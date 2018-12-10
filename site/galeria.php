@@ -28,7 +28,7 @@
 									</button>");}
 								?>
 								</div>
-							
+							</br></br></br></br>
 							<div class="row isotope-grid">
 							
 							<?php	
@@ -46,37 +46,7 @@
 								</a></div>	</div>");}
 							?>
 							</div>
-							<div class="grid_4">
-								<h3>Nature</h3>
-							</div>
-							<div class="clear"></div>
-							<div class="grid_4">
-								<a href="../web/images/full7.jpg" class="gal_item">
-									<img src="../web/images/page2_img7.jpg" alt="">
-									<div class="gal_caption">
-										<time datetime="2014-01-01">01 Mar 2014</time>
-									</div>
-									<span class="gal_magnify"></span>
-								</a>
-							</div>
-							<div class="grid_4">
-								<a href="../web/images/full8.jpg" class="gal_item">
-									<img src="../web/images/page2_img8.jpg" alt="">
-									<div class="gal_caption">
-										<time datetime="2014-01-01">10 Mar 2014</time>
-									</div>
-									<span class="gal_magnify"></span>
-								</a>
-							</div>
-							<div class="grid_4">
-								<a href="../web/images/full9.jpg" class="gal_item">
-									<img src="../web/images/page2_img9.jpg" alt="">
-									<div class="gal_caption">
-										<time datetime="2014-01-01">25 Mar 2014</time>
-									</div>
-									<span class="gal_magnify"></span>
-								</a>
-							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 04-Dez-2018 às 22:57
--- Versão do servidor: 10.1.24-MariaDB
--- PHP Version: 7.1.6
+-- Generation Time: 10-Dez-2018 às 01:10
+-- Versão do servidor: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,7 +33,7 @@ CREATE TABLE `adm` (
   `Nome` varchar(50) DEFAULT NULL,
   `Nome_de_usuario` varchar(50) DEFAULT NULL,
   `Tipo` varchar(50) DEFAULT NULL,
-  `Senha` varchar(20) DEFAULT NULL
+  `Senha` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,9 +41,9 @@ CREATE TABLE `adm` (
 --
 
 INSERT INTO `adm` (`ID`, `Nome`, `Nome_de_usuario`, `Tipo`, `Senha`) VALUES
-(1, 'douglas', 'douglasgiordani', 'Administrador', 'seila'),
-(3, 'TESTE2', 'TESTE2', 'Adiministrador', 'SEILA'),
-(19, 'daniel', 'daniel120', 'Administrador', '202cb962ac59075b964b');
+(1, 'douglas', 'douglasgiordani', 'Administrador', '6e7b2ce2952496d9a8968259e8c2a3d4'),
+(3, 'TESTE2', 'TESTE2', 'Administrador', 'SEILA'),
+(19, 'daniel', 'daniel120', 'Administrador', '6e7b2ce2952496d9a8968259e8c2a3d4');
 
 -- --------------------------------------------------------
 
@@ -87,7 +87,7 @@ CREATE TABLE `agenda` (
 --
 
 INSERT INTO `agenda` (`ID`, `Id_admin`, `data`, `Evento`) VALUES
-(2, 3, '2018-12-19', 'tirar do bronce a lucelia');
+(3, 1, '2018-12-25', 'Fotos de natal na praÃ§a internacional');
 
 -- --------------------------------------------------------
 
@@ -151,9 +151,9 @@ CREATE TABLE `galeria` (
 --
 
 INSERT INTO `galeria` (`ID`, `Nome`, `Categoria`, `Data`) VALUES
-(3, 'teste 1', NULL, NULL),
-(4, 'teste4', NULL, NULL),
-(5, 'Prof bronce', NULL, NULL);
+(3, 'Animais', NULL, NULL),
+(4, 'Campo', NULL, NULL),
+(5, 'Cidade', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -216,36 +216,43 @@ ALTER TABLE `galeria`
 --
 ALTER TABLE `adm`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `adm_contato`
 --
 ALTER TABLE `adm_contato`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `adm_galeria`
 --
 ALTER TABLE `adm_galeria`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `fotos`
 --
 ALTER TABLE `fotos`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `galeria`
 --
 ALTER TABLE `galeria`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- Constraints for dumped tables
 --
