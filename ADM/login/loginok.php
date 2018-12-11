@@ -2,8 +2,8 @@
 	include_once("../../class/Carregar.class.php");
 	include_once("../../class/recaptchalib.php");
 	$obj = new Adm();
-	$obj->Nome_de_usuario = addslashes($_POST["Nome_de_usuario"]);
-	$obj->Senha =addslashes($_POST["Senha"]);
+	$obj->Nome_de_usuario = preg_replace('/[^[:alnum:]_]/', '',$_POST['Nome_de_usuario']);
+	$obj->Senha = preg_replace('/[^[:alnum:]_]/', '',$_POST['Senha']);
 	$obj->cripo = md5($obj->Senha);
 	$retorno = $obj->loginadm();
 	 
