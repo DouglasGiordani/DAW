@@ -19,9 +19,9 @@
 	
 	$retorno = $objfoto->inserir();
 	if ($retorno)
-		 echo "funciono Você e muito proo";
+		 echo "funcionou";
 	else
-		 echo "não funciono você e bronce"; 
+		 echo "não funcionou"; 
 	?>
 	<?php
 	include_once("../../interface/rodape.php");
